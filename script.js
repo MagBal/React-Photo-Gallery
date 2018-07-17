@@ -70,8 +70,6 @@ class App extends React.Component {
 
 class Gallery extends React.Component {
   render() {
-    // Create area for each item in album array
-    // Pass album to each picture and assign a key
     return (
       <div className="gallery">
         {this.props.album.map(album => {
@@ -89,13 +87,12 @@ class Pictures extends React.Component {
       open: false,
       mouseOver: false
     };
-    // Bind properties to class instance
+    
     this.clickHandler = this.clickHandler.bind(this);
     this.mouseEnter = this.mouseEnter.bind(this);
     this.mouseLeave = this.mouseLeave.bind(this);
   }
 
-  // Event handlers to modify state values
   mouseEnter(e) {
     e.preventDefault();
     if (this.state.mouseOver === false) {
@@ -127,11 +124,8 @@ class Pictures extends React.Component {
   }
 
   render() {
-    // Modify styles based on state values
     let pictureStyle = {};
-    let headerStyle = {};
-    let zoom = {};
-    // When picture clicked
+        
     if (this.state.open) {
       pictureStyle = {
         width: "70vw",
