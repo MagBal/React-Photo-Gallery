@@ -22,7 +22,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "mime": "^2.3.1"
+  },
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "babel-standalone": "^6.26.0",
